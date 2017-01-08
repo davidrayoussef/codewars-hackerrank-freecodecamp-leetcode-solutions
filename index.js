@@ -1,3 +1,36 @@
+// jshint esversion:6
+function convertToRoman(num) {
+  const romanNumerals = {
+    'M': 1000,
+    'CM': 900,
+    'D': 500,
+    'CD': 400,
+    'C': 100,
+    'XC': 90,
+    'L': 50,
+    'XL': 40,
+    'X': 10,
+    'IX': 9,
+    'V': 5,
+    'IV': 4,
+    'I': 1
+  };
+  let result = '';
+
+  Object.keys(romanNumerals).map(key => {
+    while (num >= romanNumerals[key]) {
+      result += key;
+      num -= romanNumerals[key];
+    }
+  });
+
+  return result;
+}
+
+convertToRoman(68);
+
+
+
 // Make a function that looks through an array of objects (first argument) and returns
 // an array of all objects that have matching property and value pairs (second argument).
 // Each property and value pair of the source object has to be present in the object from
@@ -210,3 +243,65 @@ function sym() {
 }
 
 sym([1, 2, 5], [2, 3, 5], [3, 4, 5]);
+
+
+
+// Write a function accum() that gives you these results...
+accum("abcd");    // "A-Bb-Ccc-Dddd"
+accum("RqaEzty"); // "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+accum("cwAt");    // "C-Ww-Aaa-Tttt"
+
+function accum(s) {
+  return s
+    .split('')
+    .map((v,i) => v.repeat(i + 1))
+    .map((v,i,a) => v[0].toUpperCase() + v.slice(1).toLowerCase())
+    .join('-')
+}
+
+
+
+// A pangram is a sentence that contains every single letter of the alphabet at least once.
+// For example, the sentence "The quick brown fox jumps over the lazy dog" is a pangram,
+// because it uses the letters A-Z at least once (case is irrelevant).
+// Given a string, detect whether or not it is a pangram. Return True if it is, False if not.
+// Ignore numbers and punctuation.
+
+function isPangram(string){
+  return /abcdefghijklmnopqrstuvwxyz/
+    .test(string
+      .toLowerCase()
+      .match(/[a-z]/g)
+      .sort()
+      .filter((v,i,a) => a.indexOf(v) === i)
+      .join('')
+    );
+}
+
+
+
+// Use the super secret characters in the superSecretChars variable to replace the matching
+// characters in your totally insecure password and make it un-hackable.
+// eg. replace all 'a's with '@'s. Make sure you get the upper case characters too just in
+// case the user wants to SHOUT their password at you.
+var superSecretChars = [['a', '@'],['s', '$'],['o', '0'], ['h', '5'], ['x', '*']];
+
+function createSSP(password) {
+  superSecretChars.map((v,i) => {
+    var reg = new RegExp(v[0], 'gi');
+    password = password.replace(reg, v[1]);
+  });
+  return password;
+}
+createSSP("haxorpassword"); //>  "5@*0rp@$$w0rd"
+
+
+
+// Write a single function that can be invoked by either
+sum(2,3); //5
+//or
+sum(2)(3); //5
+
+function sum(a,b) {
+  return arguments.length > 1 ? a + b : (c) => a + c;
+}
