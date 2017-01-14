@@ -1,5 +1,6 @@
 // Given a positive integer num, return the sum of all odd Fibonacci numbers that are
 // less than or equal to num.
+
 function sumFibonacciNumbers(num) {
   let a = 1;
   let b = 1;

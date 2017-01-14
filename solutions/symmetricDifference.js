@@ -2,6 +2,7 @@
 // symmetric difference (△ or ⊕) of the provided arrays.
 // For every additional symmetric difference you take, you should get
 // the set with elements which are in either of the two the sets but not both
+
 function symmetricDifference() {
   let arrs = Array
     .from(arguments)

@@ -2,6 +2,7 @@
 // characters in your totally insecure password and make it un-hackable.
 // eg. replace all 'a's with '@'s. Make sure you get the upper case characters too just in
 // case the user wants to SHOUT their password at you.
+
 const superSecretChars = [['a', '@'],['s', '$'],['o', '0'], ['h', '5'], ['x', '*']];
 
 function createSuperSecretPassword(password) {

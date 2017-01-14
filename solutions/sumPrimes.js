@@ -1,4 +1,5 @@
 // Sum all the prime numbers up to and including the provided number.
+
 function sumPrimes(num) {
   let primes = [];
   const isPrime = (n) => {
