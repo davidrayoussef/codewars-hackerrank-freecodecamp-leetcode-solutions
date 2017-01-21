@@ -16,16 +16,15 @@ function convertToRomanNumeral(num) {
     'IV': 4,
     'I': 1
   };
-  let result = '';
 
-  Object.keys(romanNumerals).map(key => {
+  return Object.keys(romanNumerals).reduce((acc, key) => {
     while (num >= romanNumerals[key]) {
-      result += key;
+      acc += key;
       num -= romanNumerals[key];
     }
-  });
+    return acc;
+  }, '');
 
-  return result;
 }
 
 convertToRomanNumeral(4); //=> "IV"

@@ -19,4 +19,4 @@ function permutations([...arr]) {
   return result.filter(str => !str.match(/([a-z])\1/g)).length;
 }
 
-permutations('aab');
+permutations('aab'); //=> 2
