@@ -1,6 +1,6 @@
 // Convert the given number into a roman numeral.
 
-function convertToRomanNumeral(num) {
+function convertIntegerToRomanNumeral(num) {
   const romanNumerals = {
     'M': 1000,
     'CM': 900,
@@ -27,10 +27,10 @@ function convertToRomanNumeral(num) {
 
 }
 
-convertToRomanNumeral(4); //=> "IV"
-convertToRomanNumeral(12); //=> "XII"
-convertToRomanNumeral(45); //=> "XLV"
-convertToRomanNumeral(500); //=> "D"
-convertToRomanNumeral(798); //=> "DCCXCVIII"
-convertToRomanNumeral(1000); //=> "M"
-convertToRomanNumeral(3999); //=> "MMMCMXCIX"
+convertIntegerToRomanNumeral(4); //=> "IV"
+convertIntegerToRomanNumeral(12); //=> "XII"
+convertIntegerToRomanNumeral(45); //=> "XLV"
+convertIntegerToRomanNumeral(500); //=> "D"
+convertIntegerToRomanNumeral(798); //=> "DCCXCVIII"
+convertIntegerToRomanNumeral(1000); //=> "M"
+convertIntegerToRomanNumeral(3999); //=> "MMMCMXCIX"
