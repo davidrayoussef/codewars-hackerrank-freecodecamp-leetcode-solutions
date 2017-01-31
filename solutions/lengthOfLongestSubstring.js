@@ -25,6 +25,6 @@ function lengthOfLongestSubstring(s) {
   }
 
   return max;
-};
+}
 
 lengthOfLongestSubstring(str); //=> 3

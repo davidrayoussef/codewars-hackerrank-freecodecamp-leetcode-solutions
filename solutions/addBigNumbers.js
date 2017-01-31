@@ -18,6 +18,6 @@ function addBigNumbers(a, b) {
   }
 
   return result.replace(/^0/, '');
-};
+}
 
 addBigNumbers('752856458734565548245482', '245665677579525565437591'); //=> "998522136314091113683073"

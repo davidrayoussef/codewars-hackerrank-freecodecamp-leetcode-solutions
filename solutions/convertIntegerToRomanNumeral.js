@@ -24,7 +24,6 @@ function convertIntegerToRomanNumeral(num) {
     }
     return acc;
   }, '');
-
 }
 
 convertIntegerToRomanNumeral(4); //=> "IV"

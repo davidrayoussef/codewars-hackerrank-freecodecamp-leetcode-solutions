@@ -38,6 +38,6 @@ function convertToZigZag(s, numRows) {
   }
 
   return [...result].filter(v => v !== ' ').join('');
-};
+}
 
 convertToZigZag("PAYPALISHIRING", 5); //=> "PHASIYIRPLIGAN"
