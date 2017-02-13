@@ -12,8 +12,8 @@ const arr1 = [2, 4];
 const arr2 = [16, 32, 96];
 
 function betweenTwoSets(arr1, arr2) {
-  const min = Math.max.apply(null, arr1);
-  const max = Math.min.apply(null, arr2);
+  const min = Math.max(...arr1);
+  const max = Math.min(...arr2);
   let result = [];
 
   const areFactorsOfX = x => arr1.every(v => x % v === 0);
@@ -25,7 +25,7 @@ function betweenTwoSets(arr1, arr2) {
     }
   }
 
-  console.log(result.length);
+  return result.length;
 }
 
 betweenTwoSets(arr1, arr2); //=> 3

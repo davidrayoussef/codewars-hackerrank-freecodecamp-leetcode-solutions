@@ -2,8 +2,8 @@
 // as well as by all sequential numbers in the range between these parameters.
 
 function smallestCommonMultiple(arr) {
-  const min = Math.min.apply(null, arr);
-  const max = Math.max.apply(null, arr);
+  const min = Math.min(...arr);
+  const max = Math.max(...arr);
   const numsBetween = Array.from(Array(max - min + 1)).map((v,i) => min + i);
   let acc = max;
 

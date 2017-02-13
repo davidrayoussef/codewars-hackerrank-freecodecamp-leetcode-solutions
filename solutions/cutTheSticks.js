@@ -19,7 +19,7 @@ function cutTheSticks(arr) {
 
   const getMinNotZero = (arr) => {
     let nums = arr.filter(v => v !== 0);
-    return Math.min.apply(null, nums);
+    return Math.min(...nums);
   };
 
   const reduceBySmallest = (arr, min) => arr.map(v => {

@@ -20,7 +20,7 @@ with bands of "brown black green silver", you would return "1M ohms, 10%" */
 function decodeResistorColors(bands) {
   bands = bands.split(' ');
   const colorCodes = { black: 0, brown: 1, red: 2, orange: 3, yellow: 4, green: 5, blue: 6, violet: 7, gray: 8, white: 9 };
-  const digits = `${colorCodes[bands[0]]}${colorCodes[bands[1]]}`;
+  const digits = '' + colorCodes[bands[0]] + colorCodes[bands[1]];
   const ohm = +digits * (10 ** colorCodes[bands[2]]);
   const formatNumber = (n) => {
     if (n >= 1000000) return `${n / 1000000}M`;
