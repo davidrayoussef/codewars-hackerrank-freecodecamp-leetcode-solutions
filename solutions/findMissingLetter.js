@@ -8,7 +8,8 @@ function findMissingLetter(str) {
       if (str[i + 1] && str[i + 1].charCodeAt() - str[i].charCodeAt() !== 1) {
         return String.fromCharCode(str[i].charCodeAt() + 1);
       } else return '';
-    }).join('') || undefined;
+    })
+    .join('') || undefined;
 }
 
 findMissingLetter("abce"); //=> "d"
