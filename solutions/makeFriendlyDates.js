@@ -12,7 +12,7 @@
 
 function makeFriendlyDates(arr) {
   const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-  const ordinalLookup = { "1": "st", "2": "nd", "3": "rd", "21": "st", "22": "nd", "23": "rd", "31": "st" };
+  const ordinalLookup = { '1': 'st', '2': 'nd', '3': 'rd', '21': 'st', '22': 'nd', '23': 'rd', '31': 'st' };
   const formatDay = (d) => `${d.getDate()}${ordinalLookup[d.getDate()] || 'th'}`;
   const formatDateString = (d) => {
     d = d.split('-');
@@ -23,12 +23,13 @@ function makeFriendlyDates(arr) {
     const date2 = new Date(formatDateString(arr[1]));
     const daysBetween = Math.abs(date2.getTime() - date1.getTime()) / (1000 * 3600 * 24);
 
-    if (d.getFullYear() === 2016 && daysBetween < 365 && i === 0) {
+    if ( d.getFullYear() === 2016 && daysBetween < 365 && i === 0 ) {
       return '';
     }
-    else if (daysBetween < 365 && i === 1) {
+    else if ( daysBetween < 365 && i === 1 ) {
       return '';
-    } else return `, ${d.getFullYear()}`;
+    }
+    else return `, ${d.getFullYear()}`;
   };
   const isSameMonth = arr[0].split('-')[0] === arr[1].split('-')[0] && arr[0].split('-')[1] === arr[1].split('-')[1];
 
@@ -37,7 +38,7 @@ function makeFriendlyDates(arr) {
     .map((v,i) => {
       let date = new Date(formatDateString(v));
 
-      if (isSameMonth && i === 1) {
+      if ( isSameMonth && i === 1 ) {
         return `${formatDay(date)}`;
       } else return `${months[date.getMonth()]} ${formatDay(date)}${checkYear(date, i)}`;
     });

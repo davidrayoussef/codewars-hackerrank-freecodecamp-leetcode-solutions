@@ -3,6 +3,7 @@
 
 function isPangram(str) {
   const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+  
   return str
     .split('')
     .map(v => v.toLowerCase())

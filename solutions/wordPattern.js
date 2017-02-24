@@ -16,7 +16,7 @@ function wordPattern(pattern, str) {
   pattern = pattern.split('');
   str = str.split(' ');
 
-  if (str.length !== pattern.length || [...new Set(str)].length !== [...new Set(pattern)].length) return false;
+  if ( str.length !== pattern.length || [...new Set(str)].length !== [...new Set(pattern)].length ) return false;
 
   let result = true;
 

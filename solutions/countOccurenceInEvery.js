@@ -10,8 +10,8 @@ function countOccurenceInEvery(input) {
 
   for (let i = 0, j = 0; i < arr.length; i++) {
     while (arr[i][j] !== undefined) {
-      let letter = arr[i][j];
-      let foundInEvery = arr.every(str => str.includes(letter));
+      const letter = arr[i][j];
+      const foundInEvery = arr.every(str => str.includes(letter));
       if (foundInEvery) letters.push(letter);
       j++;
     }

@@ -7,6 +7,6 @@ function accumulator(s) {
   return s
     .split('')
     .map((v,i) => v.repeat(i + 1))
-    .map((v,i,a) => v[0].toUpperCase() + v.slice(1).toLowerCase())
+    .map(v => v[0].toUpperCase() + v.slice(1).toLowerCase())
     .join('-');
 }

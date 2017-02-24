@@ -16,8 +16,8 @@ function betweenTwoSets(arr1, arr2) {
   const max = Math.min(...arr2);
   let result = [];
 
-  const areFactorsOfX = x => arr1.every(v => x % v === 0);
-  const xIsFactorOf = x => arr2.every(v => v % x === 0);
+  const areFactorsOfX = (x) => arr1.every(v => x % v === 0);
+  const xIsFactorOf = (x) => arr2.every(v => v % x === 0);
 
   for (let i = min; i <= max; i++) {
     if (areFactorsOfX(i) && xIsFactorOf(i)) {

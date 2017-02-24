@@ -20,8 +20,8 @@ function convertRomanNumeralToInteger(s) {
   let result = 0;
 
   while (s.length) {
-    let single = s[0];
-    let double = s[0] + s[1];
+    const single = s[0];
+    const double = s[0] + s[1];
 
     if (romanNumerals[double]) {
       result += romanNumerals[double];

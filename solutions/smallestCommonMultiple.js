@@ -4,7 +4,7 @@
 function smallestCommonMultiple(arr) {
   const min = Math.min(...arr);
   const max = Math.max(...arr);
-  const numsBetween = Array.from(Array(max - min + 1)).map((v,i) => min + i);
+  const numsBetween = Array.from({length: max - min + 1}).map((v,i) => min + i);
   let acc = max;
 
   const areDivisible = (dividend) => {

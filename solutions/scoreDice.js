@@ -20,12 +20,12 @@ function scoreDice(dice) {
   const triplets = dice
     .sort((a,b) => a - b)
     .map((_,i,a) => {
-      if (a[i] === a[i + 1] && a[i] === a[i + 2]) {
+      if ( a[i] === a[i + 1] && a[i] === a[i + 2] ) {
         return a.splice(i, 3).join('');
       }
     })
     .join('')
-  let result = points[triplets] || 0;
+  const result = points[triplets] || 0;
 
   return dice.reduce((acc, curr) => acc + (points[String(curr)] || 0), result);
 }
