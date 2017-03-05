@@ -8,11 +8,9 @@ function rot13(str) {
     .from({length: 26})
     .map((_,i) => String.fromCharCode(i + 65));
 
-  chars = chars.concat(chars);
-
   return str
     .split('')
-    .map(v => !v.match(/[A-Z]/) ? v : chars[chars.indexOf(v) + 13])
+    .map(v => !v.match(/[A-Z]/) ? v : chars[(chars.indexOf(v) + 13) % 26])
     .join('');
 }
 
