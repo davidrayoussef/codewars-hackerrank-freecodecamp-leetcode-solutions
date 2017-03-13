@@ -25,7 +25,7 @@ class MinStack {
   }
 
   top() {
-    return this.list[this.list.length - 1];
+    return this.list[this.length - 1];
   }
 
   getMin() {

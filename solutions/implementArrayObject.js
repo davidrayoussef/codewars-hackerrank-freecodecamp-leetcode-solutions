@@ -34,7 +34,7 @@ class List {
   }
 
   pop() {
-    let item = this[this.length - 1];
+    const item = this[this.length - 1];
     delete this[this.length - 1];
     this.length--;
 
