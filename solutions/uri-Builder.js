@@ -5,7 +5,7 @@ that need to be managed. The URL must be properly encoded (i.e. "a b" should be 
 
 Examples of how the builder will be used:
 let builder = new UriBuilder('http://www.codewars.com')
-builder.params.page = 1
+builder.params.page = 1 
 builder.params.language = 'javascript'
 
 // new builder instance to demonstrate pre-existing params.

@@ -3,7 +3,7 @@ Write a class with methods that, when given a string, will encode and return an 
 shifted forward in the alphabet by however many shifts the cipher was initialized with. It should also contain
 a method to decode an encoded string.
 
-For example:
+For example: 
 let c = new CaesarCipher(5);
 c.encode('Codewars'); // returns 'HTIJBFWX'
 c.decode('BFKKQJX'); // returns 'WAFFLES'
