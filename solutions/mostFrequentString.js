@@ -1,6 +1,6 @@
 // Find the most frequent string in an array
 
-var arr = ['apples', 'oranges', 'bananas', 'oranges', 'bananas', 'apples', 'oranges', 'bananas', 'apples', 'apples'];
+const arr = ['apples', 'oranges', 'bananas', 'oranges', 'bananas', 'apples', 'oranges', 'bananas', 'apples', 'apples'];
 
 function mostFrequentString(arr) {
   let tally = arr.reduce((obj, item) => {
