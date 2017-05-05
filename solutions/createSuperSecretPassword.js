@@ -3,14 +3,15 @@
 // eg. replace all 'a's with '@'s. Make sure you get the upper case characters too just in
 // case the user wants to SHOUT their password at you.
 
-const superSecretChars = [['a', '@'],['s', '$'],['o', '0'], ['h', '5'], ['x', '*']];
+const superSecretChars = [ ['a', '@'], ['s', '$'], ['o', '0'], ['h', '5'], ['x', '*'] ];
 
 function createSuperSecretPassword(password) {
-  superSecretChars.map((v,i) => {
+  superSecretChars.map(v => {
     const reg = new RegExp(v[0], 'gi');
     password = password.replace(reg, v[1]);
   });
+
   return password;
 }
 
-createSuperSecretPassword("haxorpassword"); //=> "5@*0rp@$$w0rd"
+createSuperSecretPassword('haxorpassword'); //=> "5@*0rp@$$w0rd"

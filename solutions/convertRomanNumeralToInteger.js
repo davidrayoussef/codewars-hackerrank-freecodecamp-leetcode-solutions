@@ -36,4 +36,4 @@ function convertRomanNumeralToInteger(s) {
   return result;
 }
 
-convertRomanNumeralToInteger("MCMXCVI"); //=> 1996
+convertRomanNumeralToInteger('MCMXCVI'); //=> 1996
