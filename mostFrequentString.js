@@ -3,7 +3,7 @@
 const arr = ['apples', 'oranges', 'bananas', 'oranges', 'bananas', 'apples', 'oranges', 'bananas', 'apples', 'apples'];
 
 function mostFrequentString(arr) {
-  let tally = arr.reduce((obj, item) => {
+  const tally = arr.reduce((obj, item) => {
     !obj[item] ? obj[item] = 1 : obj[item]++;
     return obj;
   }, {});

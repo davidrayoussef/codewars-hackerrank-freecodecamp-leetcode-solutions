@@ -16,7 +16,7 @@ function wordPattern(pattern, str) {
   pattern = pattern.split('');
   str = str.split(' ');
 
-  if ( str.length !== pattern.length || [...new Set(str)].length !== [...new Set(pattern)].length ) return false;
+  if ( [...new Set(pattern)].length !== [...new Set(str)].length) return false;
 
   let result = true;
 
@@ -29,4 +29,4 @@ function wordPattern(pattern, str) {
   return result;
 }
 
-wordPattern("aabababaa", "cat cat dog cat dog cat dog cat cat"); //=> true
+wordPattern('aabababaa', 'cat cat dog cat dog cat dog cat cat'); //=> true
