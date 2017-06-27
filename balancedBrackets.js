@@ -1,22 +1,22 @@
-// For each string, print whether or not the string of brackets is balanced on a new line.
-// If the brackets are balanced, print YES; otherwise, print NO.
+// Check whether or not the string of brackets is balanced. If the brackets are balanced, print YES; otherwise, print NO.
+// The passed string will only consist of opening and closing brackets of one of three types.
 
-function balancedBrackets(expression) {
+function balancedBrackets(str) {
   const opening = ['(', '{', '['];
   const closing = [')', '}', ']'];
   let stack = [];
 
-  expression.split('').map(v => {
-    if ( opening.includes(v) ) {
-      stack.push(v);
+  for (let char of str) {
+    if ( opening.includes(char) ) {
+      stack.push(char);
     }
-    else if ( closing.includes(v) && opening.indexOf(stack[stack.length - 1]) === closing.indexOf(v) ) {
+    else if ( opening.indexOf(stack[stack.length - 1]) === closing.indexOf(char) ) {
       stack.pop();
     }
-    else stack.push(v);
-  });
+    else return 'NO';
+  }
 
-  return stack.length ? 'NO' : 'YES';
+  return stack.length > 0 ? 'NO' : 'YES';
 }
 
 balancedBrackets('{[()]}'); //=> "YES"
