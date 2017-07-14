@@ -14,13 +14,13 @@ function bitsBattle(numbers) {
 
   const evens = numbers
     .filter(v => v % 2 === 0)
-    .map(v => (v >>> 0).toString(2))
+    .map(v => v.toString(2))
     .join('')
     .match(/0/g).length || 0;
 
   const odds = numbers
     .filter(v => v % 2 !== 0)
-    .map(v => (v >>> 0).toString(2))
+    .map(v => v.toString(2))
     .join('')
     .match(/1/g).length || 0;
 
