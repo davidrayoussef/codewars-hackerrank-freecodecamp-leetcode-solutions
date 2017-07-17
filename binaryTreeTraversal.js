@@ -13,9 +13,9 @@ function preOrder(node, nodes = []) {
 
 function inOrder(node, nodes = []) {
   if (node) {
-    preOrder(node.left, nodes);
+    inOrder(node.left, nodes);
     nodes.push(node.data);
-    preOrder(node.right, nodes);
+    inOrder(node.right, nodes);
   }
 
   return nodes;
@@ -23,14 +23,13 @@ function inOrder(node, nodes = []) {
 
 function postOrder(node, nodes = []) {
   if (node) {
-    preOrder(node.left, nodes);
-    preOrder(node.right, nodes);
+    postOrder(node.left, nodes);
+    postOrder(node.right, nodes);
     nodes.push(node.data);
   }
 
   return nodes;
 }
-
 
 function Node(data, left = null, right = null) {
   this.data = data;
