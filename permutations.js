@@ -1,22 +1,24 @@
-// Return the number of total permutations of the provided string that don't have repeated consecutive letters.
+// Return an array of all permutations of the provided string without repeated characters.
 // Assume that all characters in the provided string are each unique.
 
-function permutations([...arr]) {
+function permutations(str) {
   let result = [];
-
-  const generatePerms = (n) => {
-    if (n === 1) result.push(arr.join(''));
-
-    for (let i = 0; i < n; i++) {
-      generatePerms(n - 1);
-      let index = n % 2 === 0 ? i : 0;
-      [arr[n - 1], arr[index]] = [arr[index], arr[n - 1]];
+  const traverse = (str, temp) => {
+    if (str.length === temp.length) result.push(temp);
+    else {
+      for (let char of str) {
+        if (!temp.includes(char)) {
+          temp += char;
+          traverse(str, temp);
+          temp = temp.slice(0, -1);
+        }
+      }
     }
   };
 
-  generatePerms(arr.length);
+  traverse(str, '');
 
-  return result.filter(str => !str.match(/([a-z])\1/g)).length;
+  return result;
 }
 
-permutations('aab'); //=> 2
+permutations('abc'); //=> ["abc", "acb", "bac", "bca", "cab", "cba"]
