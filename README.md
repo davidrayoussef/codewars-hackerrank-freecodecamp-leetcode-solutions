@@ -5,5 +5,3 @@ My solutions to code challenges from Codewars, leetcode, Hackerrank and freeCode
 [Leetcode Profile](https://leetcode.com/davidra/)
 
 [FreeCodeCamp Profile](https://www.freecodecamp.org/davidrayoussef)
-
-[CodeSchool Profile](https://www.codeschool.com/users/davidra)
