@@ -15,7 +15,8 @@ Example input:
   { id: 8, type: 'video' }
 ]
 
-Return an array of arrays, with the article objects grouped together in an array, and the video object in a separate array. Your output should look like the following:
+Return an array of arrays, with the article objects grouped together in an array, 
+and the video object in a separate array. Your output should look like the following:
 
 Example output:
 [
@@ -37,7 +38,8 @@ Example output:
   ]
 ]
 
-Note: The objects in the input array will only contain type properties of "article" and "video" and always in lowercase.
+Note: The objects in the input array will only contain type properties of "article" and 
+"video" and always in lowercase.
 */
 
 function groupByType(arr) {
